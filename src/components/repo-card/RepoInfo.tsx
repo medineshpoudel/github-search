@@ -23,7 +23,6 @@ const RepoInfo = ({ repoCount, selectItem }: RepoInfoProps) => {
                     <a onClick={() => clickHandler(5)}>Default</a>
                     <a onClick={() => clickHandler(10)}>10</a>
                     <a onClick={() => clickHandler(30)}>30</a>
-                    <a onClick={() => clickHandler(30)}>50</a>
                 </div>
             </div>
         </div>

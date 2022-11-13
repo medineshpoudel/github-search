@@ -10,6 +10,7 @@ const initialState = {
     page: 0,
     per_page: 5,
     no_of_page: 10,
+    items: [],
 };
 
 const AppProvider = ({ children }) => {
@@ -27,7 +28,7 @@ const AppProvider = ({ children }) => {
                 },
             });
         } catch (error) {
-            dispatch({ type: '' });
+            dispatch({ type: 'SEARCH_ERROR' });
         }
     };
     const searchChanges = (searchText) => {
