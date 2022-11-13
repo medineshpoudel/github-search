@@ -64,13 +64,4 @@ module.exports = {
         'react/require-default-props': 0,
         'react/function-component-definition': 0,
     },
-    overrides: [
-        {
-            files: ['**/*.stories.*'],
-            rules: {
-                'import/no-anonymous-default-export': 'off',
-                'import/no-extraneous-dependencies': 'off',
-            },
-        },
-    ],
 };

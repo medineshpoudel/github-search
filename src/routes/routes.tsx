@@ -1,6 +1,6 @@
 import React from 'react';
+import Details from '../pages/Details';
 import Home from '../pages/Home';
-import TestPage from '../pages/TestPage';
 
 const routes = [
     {
@@ -10,10 +10,10 @@ const routes = [
         element: <Home />,
     },
     {
-        route: '/testpage',
+        route: '/details/:id',
         title: 'Home',
         name: 'Home',
-        element: <TestPage />,
+        element: <Details />,
     },
 ];
 

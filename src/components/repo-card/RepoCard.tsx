@@ -1,14 +1,16 @@
 import React from 'react';
 
 interface UserCardProps {
+    data?: any;
     repoName?: string;
     repoDescription?: string;
     repoStars?: number;
     repoForks?: number;
     repoUpdateDate?: Date;
-    onClickHandler: () => any;
+    onClickHandler: (data: any) => any;
 }
 const UserCard = ({
+    data,
     repoName = 'Repo Name',
     repoDescription = 'description',
     repoStars = 10,
@@ -16,9 +18,12 @@ const UserCard = ({
     repoUpdateDate,
     onClickHandler,
 }: UserCardProps) => {
+    const handleClick = () => {
+        onClickHandler(data);
+    };
     return (
         <div className="repo-card">
-            <div className="repo-name" onClick={onClickHandler}>
+            <div className="repo-name" onClick={handleClick}>
                 {repoName}
             </div>
             <div className="repo-description">{repoDescription}</div>
